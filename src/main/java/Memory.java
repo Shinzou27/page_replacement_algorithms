@@ -56,6 +56,17 @@ public class Memory {
         }
         return toReturnPage;
     }
+    public Page getLeastReferencedPage() {
+        Page toReturnPage = null;
+        for (Page page: pages) {
+            if (toReturnPage == null) {
+                toReturnPage = page;
+            } else if (toReturnPage.getTimesUsed() > page.getTimesUsed()) {
+                toReturnPage = page;
+            }
+        }
+        return toReturnPage;
+    }
     public void cleanStorage() {
         this.pages.clear();
     }

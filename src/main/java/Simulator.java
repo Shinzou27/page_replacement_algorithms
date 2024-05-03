@@ -5,7 +5,7 @@ public class Simulator {
         int operationLength = 50;
         int memoryCapacity = 5;
         int pageAmount = 10;
-        String[] mockValues = {"B","E","F","F","B","G","C","A","B","A","C","D","D","J","C","F","I","D","H","D","E","B","D","D","E","G","D","A","C","J","J","H","H","E","B","G","G","F","H","B","G","C","D","D","C","A","A","A","D","I"};
+        String[] mockValues = {"F","I","J","G","I","B","C","F","C","B","E","A","G","E","C","C","G","I","F","E","D","G","I","A","B","I","A","H","B","E","B","H","J","C","F","G","G","E","G","D","J","J","C","I","E","H","B","B","C","I"};
 
 
         Algorithm fifo = new FIFO();
@@ -32,5 +32,6 @@ public class Simulator {
 //        }
         fifo.execute(memory, mockPagesToBeReferenced, operations);
         lru.execute(memory, mockPagesToBeReferenced, operations);
+        nfu.execute(memory, mockPagesToBeReferenced, operations);
     }
 }

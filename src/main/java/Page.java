@@ -1,6 +1,7 @@
 public class Page {
     private int id;
     private String value;
+    private int timesUsed;
     private int lastTimeUsed;
     private int timeInserted;
     private int bitR;
@@ -38,6 +39,13 @@ public class Page {
 
     public void setTimeInserted(int timeInserted) {
         this.timeInserted = timeInserted;
+    }
+    public int getTimesUsed() {
+        return timesUsed;
+    }
+
+    public void setTimesUsed(int timesUsed) {
+        this.timesUsed = timesUsed;
     }
 
     public int getBitR() {
