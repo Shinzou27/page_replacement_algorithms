@@ -26,9 +26,6 @@ public class Clock implements Algorithm {
                     memory.replaceClock(oldestPage, page, i);
                     pointer = (pointer + 1) % pages.length;
                 } else {
-                    if( i <= 5) {
-                        pageFaults++;
-                    }
                     memory.insert(page, i);
                     this.describeStep("A página " + page.getValue() + " foi inserida em uma posição livre da memória.");
                 }

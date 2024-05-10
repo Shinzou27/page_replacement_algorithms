@@ -29,9 +29,9 @@ public class Simulator {
 //                pagesToBeReferenced) {
 //            System.out.print(pg.getValue() + " ");
 //        }
-        fifo.execute(memory, mockPagesToBeReferenced, operations);
-        lru.execute(memory, mockPagesToBeReferenced, operations);
-        nfu.execute(memory, mockPagesToBeReferenced, operations);
+//        fifo.execute(memory, mockPagesToBeReferenced, operations);
+//        lru.execute(memory, mockPagesToBeReferenced, operations);
+//        nfu.execute(memory, mockPagesToBeReferenced, operations);
         clock.execute(memory, mockPagesToBeReferenced, operations);
     }
 }
