@@ -7,7 +7,6 @@ public class Simulator {
         int pageAmount = 10;
         String[] mockValues = {"F","I","J","G","I","B","C","F","C","B","E","A","G","E","C","C","G","I","F","E","D","G","I","A","B","I","A","H","B","E","B","H","J","C","F","G","G","E","G","D","J","J","C","I","E","H","B","B","C","I"};
 
-
         Algorithm fifo = new FIFO();
         Algorithm lru = new LRU();
         Algorithm nfu = new NFU();
@@ -33,5 +32,6 @@ public class Simulator {
         fifo.execute(memory, mockPagesToBeReferenced, operations);
         lru.execute(memory, mockPagesToBeReferenced, operations);
         nfu.execute(memory, mockPagesToBeReferenced, operations);
+        clock.execute(memory, mockPagesToBeReferenced, operations);
     }
 }

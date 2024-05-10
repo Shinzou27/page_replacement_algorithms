@@ -68,6 +68,12 @@ public class Page {
         this.lastTimeUsed = lastTimeUsed;
     }
 
+    public boolean isRecentlyUsed() {
+        return bitR == 1;
+    }
+    public void setRecentlyUsed(boolean recentlyUsed) {
+        this.bitR = recentlyUsed ? 1 : 0;
+    }
     @Override
     public String toString() {
         return "Página " + id + " | " + value;

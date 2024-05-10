@@ -17,8 +17,20 @@ public class Memory {
         this.insert(enterPage, index, time);
         this.remove(exitPage);
     }
+
+    public void replaceClock(Page oldPage, Page newPage, int time) {
+        int index = pages.indexOf(oldPage);
+        if (index != -1) {
+            pages.set(index, newPage);
+        } else {
+            // Se a página antiga não estiver na lista, remove a primeira página e adiciona a nova página
+            pages.remove(0);
+            pages.add(newPage);
+        }
+    }
     public void insert(Page page, int time) {
         this.pages.add(page);
+        System.out.println(time);
         page.setTimeInserted(time);
     }
     public void insert(Page page, int index, int time) {
@@ -45,6 +57,10 @@ public class Memory {
         }
         return toReturnPage;
     }
+    public Page getPageAt(int index) {
+        return pages.get(index);
+    }
+
     public Page getOldestPage() {
         Page toReturnPage = null;
         for (Page page: pages) {
@@ -75,5 +91,9 @@ public class Memory {
             System.out.print(page.getValue() + " | ");
         }
         System.out.println();
+    }
+
+    public int getCapacity() {
+        return capacity;
     }
 }
